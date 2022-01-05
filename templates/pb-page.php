@@ -47,7 +47,7 @@
     <body>
         <nav>
             <div class="pb-logo">
-                <?php echo file_get_contents(SITE_LOCATION . 'pb-pubfiles/img/pb-logos/full-white.svg'); ?>
+                <?php echo file_get_contents(PUBFILES_DIR . '/img/pb-logos/full-white.svg'); ?>
             </div>
 
             <div class="source-links">
