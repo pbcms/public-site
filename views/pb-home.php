@@ -1,6 +1,6 @@
 <section class="introduction">
     <h1>
-        Easy of coding
+        Ease of coding
     </h1>
     <p>
         Pbcms is designed to be the groundwork for your amazing project. You don't want to think about setting up user back-ends, permissions, etc. <br>
