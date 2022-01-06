@@ -215,6 +215,11 @@ html.darkmode .landing-image svg rect:nth-child(97) {
         float: left;
         text-align: left;
     }
+    
+    section.right p,
+    div.section-container.right section p {
+        margin-left: 2px
+    }
 }
 
 @media only screen and (max-width: 450px) {
