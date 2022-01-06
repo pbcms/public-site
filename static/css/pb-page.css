@@ -104,6 +104,8 @@ nav {
     color: black;
     transition: background-color .22s ease, color .2s ease, width .15s ease, padding .15s ease, margin .15s ease, border-radius .15s ease;
     border-radius: 0px;
+    position: relative;
+    overflow: hidden;
 }
 
 html.darkmode nav {
@@ -149,12 +151,16 @@ html.darkmode .pb-logo svg path:last-child {
     transition: fill .8s ease;
 }
 
-nav .source-links {
+nav .mobile-navigation {
+    display: none;
+}
+
+nav .links {
     height: 50px;
     padding: 25px 0px;
 }
 
-nav .source-links a {
+nav .links a {
     width: 50px;
     height: 50px;
     color: black;
@@ -165,31 +171,88 @@ nav .source-links a {
     display: inline-block;
 }
 
-html.darkmode nav .source-links a {
+html.darkmode nav .links a {
     color: white;
     transition: color .8s ease, background-color .2s ease, border-radius .2s ease;
 }
 
-nav .source-links a:not(:last-child) {
+nav .links a:not(:last-child) {
     margin-right: 35px;
 }
 
-nav .source-links a:hover {
+nav .links a:hover {
     background-color: black;
     border-radius: 25%;
     color: white;
 }
 
-html.darkmode nav .source-links a:hover {
+html.darkmode nav .links a:hover {
     background-color: white;
     color: black;
     transition: color .2s ease, background-color .2s ease, border-radius .3s ease;
 }
 
-nav .source-links a svg {
+nav .links a svg {
     height: 30px;
     width: 30px;
     padding: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+    nav.open-mobile-navigation {
+        padding-bottom: 115px;
+    }
+
+    html.darkmode nav.open-mobile-navigation {
+        padding-bottom: 95px;
+    }
+
+    nav .mobile-navigation {
+        display: block;
+    }
+
+    nav.open-mobile-navigation .mobile-navigation a {
+        background-color: #d9d9d9;
+        border-radius: 25%;
+        color: black;
+    }
+    
+    html.darkmode nav.open-mobile-navigation .mobile-navigation a {
+        background-color: #404040;
+        color: white;
+        transition: color .2s ease, background-color .2s ease, border-radius .3s ease;
+    }
+
+    nav .nav-items {
+        position: absolute;
+        width: calc(100% - 110px);
+        height: 70px;
+        padding: 30px 55px 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        transition: width .15s ease, padding .15s ease;
+        top: 100px;
+        left: 0px;
+        z-index: 1000;
+    }   
+
+    html.darkmode nav .nav-items {
+        padding: 5px 35px 0px 35px;
+        width: calc(100% - 70px);
+        transition: width .25s ease, padding .25s ease;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    nav .nav-items {
+        justify-content: space-between;
+    }
+    
+    nav .nav-items a {
+        width: 50px;
+        margin-right: 0px !important;
+    }
 }
 
 body > div.content {

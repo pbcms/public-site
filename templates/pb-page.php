@@ -54,7 +54,13 @@
                 </a>
             </div>
 
-            <div class="source-links">
+            <div class="links mobile-navigation">
+                <a toggle-mobile-navigation>
+                    <i data-feather="menu"></i>
+                </a>
+            </div>
+
+            <div class="links nav-items">
                 <a toggle-darkmode>
                     <i data-feather="<?php echo ($darkmode ? 'sun' : 'moon'); ?>"></i>
                 </a>
