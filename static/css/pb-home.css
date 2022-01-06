@@ -70,6 +70,11 @@ section p {
     margin-bottom: 35px;
     margin-top: 15px;
     font-size: 18px;
+    max-width: 70%;
+}
+
+section p:last-child {
+    margin-bottom: 0px;
 }
 
 /* INTRODUCTION */
@@ -95,17 +100,25 @@ html.darkmode section.introduction > *:not(pre) {
 }
 
 section.introduction pre {
+    padding-top: 20px;
+    padding-bottom: 25px;
     background-color: #000;
     border-radius: 25px;
     color: white;
     padding-left: 30px;
     transition: background-color .22s ease, border-radius .15s ease, width .4s ease;
+    overflow-x: scroll;
 }
 
 html.darkmode section.introduction pre {
     background-color: #1b1b1b;
     border-radius: 20px;
     transition: background-color .3s ease, border-radius .8s ease, width .4s ease;
+}
+
+section.introduction pre::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }
 
 section.introduction code, 
@@ -156,4 +169,77 @@ html.darkmode .landing-image svg path:nth-child(81) { fill: #202020; }
 html.darkmode .landing-image svg rect:nth-child(96),
 html.darkmode .landing-image svg rect:nth-child(97) { 
     fill: #353535; 
+}
+
+@media only screen and (max-width: 1400px) {
+    .landing-image svg {
+        max-width: 400px;
+    }
+
+    section:not(.introduction) p {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .landing-image {
+        display: none;
+    }
+
+    section.introduction p {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    div.section-container {
+        flex-direction: column;
+    }
+
+    section,
+    section.introduction {
+        width: calc(100% - 110px);
+    }
+    
+    html.darkmode section {
+        width: calc(100% - 100px);
+    }
+    
+    html.darkmode section.introduction {
+        width: calc(100% - 70px);
+    }
+
+    section.right,
+    div.section-container.right section {
+        float: left;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    section h1 {
+        font-size: 35px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    section.introduction code, 
+    section.introduction code span {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    section.introduction pre {
+        padding-left: 20px;    
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    section.introduction code, 
+    section.introduction code span {
+        font-size: 12px;
+    }
 }

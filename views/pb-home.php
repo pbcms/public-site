@@ -8,9 +8,7 @@
             You just want to get going, right?
         </p>
 
-        <pre>
-            <code>
-<span class="blue">&#x3C;?php</span>
+<pre><code><span class="blue">&#x3C;?php</span>
     <span class="blue">namespace</span> <span class="mint">Controller</span>;
 
     <span class="blue">class</span> <span class="mint">Root</span> {
@@ -18,9 +16,7 @@
             <span class="yellow">echo</span> <span class="brown">&#x27;Hello World! :D&#x27;</span>;
         }
     }
-<span class="blue">?&#x3E;</span>
-            </code>
-        </pre>
+<span class="blue">?&#x3E;</span></code></pre>
     </section>
     
     <div class="landing-image">
