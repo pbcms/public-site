@@ -31,6 +31,11 @@ div.section-container.right section {
     text-align: right;
 }
 
+section.right p,
+div.section-container.right section p {
+    margin-left: calc(20% - 4px);
+}
+
 html.darkmode section {
     width: calc(50% - 100px);
     padding: 25px 35px;
@@ -66,15 +71,13 @@ html.darkmode section h1::after {
 }
 
 section p {
-    margin-left: 2px;
-    margin-bottom: 35px;
-    margin-top: 15px;
+    margin: 15px 2px 35px;
     font-size: 18px;
-    max-width: 70%;
+    max-width: 80%;
 }
 
 section p:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 /* INTRODUCTION */
@@ -223,6 +226,10 @@ html.darkmode .landing-image svg rect:nth-child(97) {
         font-size: 16px;
     }
 
+    section p:last-child {
+        margin-bottom: 10px;
+    }
+
     section.introduction code, 
     section.introduction code span {
         font-size: 13px;
@@ -237,5 +244,9 @@ html.darkmode .landing-image svg rect:nth-child(97) {
     section.introduction code, 
     section.introduction code span {
         font-size: 12px;
+    }
+
+    section h1 {
+        font-size: 30px;
     }
 }
