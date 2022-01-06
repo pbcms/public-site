@@ -34,10 +34,12 @@
 
     if (isset($data['head'])) $assets->registerBatch('head', $data['head']);
     if (isset($data['body'])) $assets->registerBatch('body', $data['body']);
+
+    $darkmode = isset($_COOKIE['darkmode']) && $_COOKIE['darkmode'] == '1';
 ?>
 
 <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" <?php echo ($darkmode ? 'class="darkmode"' : ''); ?>>
     <head>
         <?php 
             echo $meta->generate(); 
@@ -47,18 +49,23 @@
     <body>
         <nav>
             <div class="pb-logo">
-                <?php echo file_get_contents(PUBFILES_DIR . '/img/pb-logos/full-white.svg'); ?>
+                <a href="<?php echo SITE_LOCATION; ?>">
+                    <?php echo file_get_contents(PUBFILES_DIR . '/img/pb-logos/full-white.svg'); ?>
+                </a>
             </div>
 
             <div class="source-links">
                 <a toggle-darkmode>
-                    <i data-feather="moon"></i>
+                    <i data-feather="<?php echo ($darkmode ? 'sun' : 'moon'); ?>"></i>
                 </a>
                 <a href="https://github.com/pbcms/pbcms" target="_blank">
                     <i data-feather="github"></i>
                 </a>
                 <a href="<?php echo SITE_LOCATION; ?>pb-auth/signin">
                     <i data-feather="<?php echo ($this->user->signedin() ? 'user' : 'log-in'); ?>"></i>
+                </a>
+                <a href="<?php echo SITE_LOCATION; ?>install">
+                    <i data-feather="download"></i>
                 </a>
             </div>
         </nav>

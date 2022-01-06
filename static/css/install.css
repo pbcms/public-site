@@ -1,0 +1,73 @@
+div.section-container {
+    display: flex;
+}
+
+div.section-container.horizontal {
+    justify-content: space-between;
+}
+
+div.section-container.vertical {
+    flex-direction: column;
+}
+
+div.section-container.vertical.right {
+    align-items: flex-end;
+}
+
+section {
+    width: calc(50% - 110px);
+    padding: 50px 55px 45px;
+    margin: 0px;
+    border-radius: 0px;
+
+    transition: background-color .22s ease, color .2s ease, width .15s ease, padding .15s ease, margin .15s ease, border-radius .15s ease;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+section.right,
+div.section-container.right section {
+    float: right;
+    text-align: right;
+}
+
+html.darkmode section {
+    width: calc(50% - 100px);
+    padding: 25px 35px;
+    margin: 25px 15px 20px;
+    border-radius: 30px;
+
+    transition: background-color .3s ease, color .6s ease, width .25s ease, padding .25s ease, margin .25s ease, border-radius .8s ease;
+    background-color: #252525;
+    color: white;
+}
+
+section h1 {
+    font-size: 45px;
+    position: relative;
+    display: inline;
+}
+
+section h1:not(.no-dot) {
+    padding-right: 13px;
+}
+
+section h1:not(.no-dot)::after {
+    content: '.';
+    color: var(--c-blue-dark);
+    position: absolute;
+    right: 0px;
+    transition: color .2s ease;
+}
+
+html.darkmode section h1::after {
+    color: var(--c-blue-light);
+    transition: color .8s ease;
+}
+
+section p {
+    margin-left: 2px;
+    margin-bottom: 35px;
+    margin-top: 15px;
+    font-size: 18px;
+}

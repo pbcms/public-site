@@ -19,4 +19,13 @@
                 )
             ));
         }
+
+        public function Install() {
+            $this->__view("install");
+            $this->__template("pb-page", array(
+                "head" => array(
+                    ["style", 'install.css', array('origin' => 'dynamic')]
+                )
+            ));
+        }
     }
