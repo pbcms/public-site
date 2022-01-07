@@ -151,8 +151,7 @@ html.darkmode .landing-image {
     max-height: 350px;
 }
 
-.landing-image svg path,
-.landing-image svg circle {
+.landing-image svg * {
     transition: fill .22s ease;
 }
 

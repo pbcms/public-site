@@ -292,3 +292,28 @@ nav .links a svg {
 body > div.content {
     overflow: auto;
 }
+
+footer {
+    width: calc(100% - 88px);
+    height: 100px;
+    margin-top: 0px;
+    padding: 25px 55px 20px 37px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    color: black;
+    transition: background-color .22s ease, color .2s ease, width .15s ease, padding .15s ease, margin .15s ease, border-radius .15s ease;
+    border-radius: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+html.darkmode footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 0px 35px 0px 17px;
+    margin: 25px 15px 20px;
+    width: calc(100% - 78px);
+    border-radius: 30px;
+    transition: background-color .3s ease, color .6s ease, width .25s ease, padding .25s ease, margin .25s ease, border-radius .8s ease;
+}
